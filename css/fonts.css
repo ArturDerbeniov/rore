@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Circe-Regular";
+  src: url("../fonts/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe-Regular.woff") format("woff"), url("../fonts/Circe-Regular.svg#Circe-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circe-Bold";
+  src: url("../fonts/Circe-Bold.woff2") format("woff2"), url("../fonts/Circe-Bold.woff") format("woff"), url("../fonts/Circe-Bold.svg#Circe-Bold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothaProMed";
+  src: url("../fonts/GothaProMed.woff2") format("woff2"), url("../fonts/GothaProMed.woff") format("woff"), url("../fonts/GothaProMed.svg#GothaProMed") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothaProReg";
+  src: url("../fonts/GothaProReg.woff2") format("woff2"), url("../fonts/GothaProReg.woff") format("woff"), url("../fonts/GothaProReg.svg#GothaProReg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Medium";
+  src: url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Bold";
+  src: url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.svg#HelveticaNeueCyr-Bold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
