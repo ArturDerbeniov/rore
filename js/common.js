@@ -205,7 +205,7 @@ var patchesFooter = {
 			var tl = gsap.timeline({});
 
 			for(let i = 0; i < placesRndArr.length; i++) {
-				let patch = document.querySelector(".patchwork__footer .patch[data-place='"+(placesRndArr[i])+"']");
+				let patch = document.querySelector(".patchwork__footer .patch[data-place='"+(placesRndArr[i]+1)+"']");
 				tl.to(patch, {
 					opacity:1,
 					scale:1,
