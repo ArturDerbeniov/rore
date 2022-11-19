@@ -23,40 +23,82 @@
 							<nav class="headerMain__nav">
 								<ul class="headerMain__menuList">
 									<li>
-										<a href="">О конференции</a>
+										<a href="" class="goto" data-dir=".section__announce">О конференции</a>
 									</li>
 									<li>
-										<a href="">Спикеры</a>
+										<a href="" class="goto" data-dir=".section__speakers__row_top">Спикеры</a>
 									</li>
 									<li>
-										<a href="">Программа</a>
+										<a href="" class="goto" data-dir=".section__program">Программа</a>
 									</li>
 									<li>
-										<a href="">Темы</a>
+										<a href="" class="goto" data-dir=".section__topics">Темы</a>
 									</li>
 									<li>
-										<a href="">Архив</a>
+										<a href="" class="goto" data-dir=".footerMain">Архив</a>
 									</li>
 									<li class="tg-menu">
 										<a href="" class="ico ico__tg"></a>
 									</li>
 								</ul>
 							</nav>
-							<div class="btn btn-round btn-round-gold" data-bs-toggle="modal" data-bs-target="#registrationModal"><div class="btn__inner"><div class="btn-txt">Зарегистрироваться</div></div></div>
+							<button class="btn btn-round btn-round-gold" data-bs-toggle="modal" data-bs-target="#registrationModal"><div class="btn__inner"><div class="btn-txt">Зарегистрироваться</div></div></button>
 							<a class="mailto d-lg-none" href="mailto:contact@rore.group">contact@rore.group</a>
 						</div>
 						<div class="headerMain__menu__bar ">
 							<div class="headerMain__menu__bar__inner"></div>
 						</div>
-						<div class="btn btn-round btn-round-gold"><div class="btn__inner"><div class="btn-txt">Войти</div></div></div>
+						<button class="btn btn-round btn-round-gold" data-bs-toggle="modal" data-bs-target="#enterModal"><div class="btn__inner"><div class="btn-txt">Войти</div></div></button>
 					</div>
 				</div>
 			</div>
 		</header>
+		<section class="section patchwork patchwork__header">
+			<div class="patch" data-place="1"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="2"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="3"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="4"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="5"><div class="patch__inner"></div></div>
 
-		<section class="patchwork patchwork__header">
-			
-		</section>
+			<div class="patch" data-place="6"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="7"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="8"><div class="patch__inner"></div></div>
+
+			<div class="patch" data-place="9"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="10"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="11"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="12"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="13"><div class="patch__inner"></div></div>
+
+			<div class="patch" data-place="14"><div class="patch__inner"></div></div>			
+			<div class="patch" data-place="15"><div class="patch__inner"></div></div>			
+			<div class="patch" data-place="16"><div class="patch__inner"></div></div>			
+			<div class="patch" data-place="17"><div class="patch__inner"></div></div>			
+
+			<div class="patch" data-place="18"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="19"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="20"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="21"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="22"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="23"><div class="patch__inner"></div></div>
+			<div class="patch" data-place="24"><div class="patch__inner"></div></div>
+
+			<div class="patchwork__header__cnt">
+				<div class="patchwork__header__cnt__inner">
+					<img src="i/title.svg" width="361" height="126" alt="Книга перемен" />
+				</div>
+			</div>
+			<div class="patchwork__header__cnt2">
+				<div class="patchwork__header__cnt2__inner">
+					Эпоха великой локализации
+				</div>
+			</div>
+			<div class="patchwork__header__cnt3">
+				<div class="patchwork__header__cnt3__inner">
+					2022
+				</div>
+			</div>
+		</section>		
 		
 		<main class="contentMain container-fluid">
 			<section class="section section__announce">				
@@ -78,6 +120,8 @@
 						</div>
 					</div>
 				</div>
+				<div class="letter r"></div>
+				<div class="letter o"></div>
 			</section>
 			<section class="section section__strim">
 				<div class="wrapperDefault">
@@ -193,6 +237,8 @@
 						</div>
 					</div>
 				</div>
+				<div class="letter r"></div>
+				<div class="letter e"></div>
 			</section>
 			<section class="section section__topics">
 				<div class="wrapperDefault">
@@ -294,6 +340,8 @@
 						</div>
 					</div>
 				</div>
+				<div class="letter r"></div>
+				<div class="letter e"></div>				
 			</section>
 		</main>
 
@@ -375,14 +423,14 @@
 					    </div>
 					    <div class="form-input">
 					        <div class="form-input__inner">
-					            <input type="tel" value="" class="form-control vld-field vld-input"  data-required="true" pattern="\D{2,}" placeholder="*Компания">
+					            <input type="text" value="" class="form-control vld-field vld-input"  data-required="true" pattern="\D{2,}" placeholder="*Компания">
 					            <label>Компания</label>
 					            <div class="validator">Обязательное поле</div>
 					        </div>
 					    </div>
 					    <div class="form-input">
 					        <div class="form-input__inner">
-					            <input type="tel" value="" class="form-control vld-field vld-input"  data-required="true" pattern="\D{2,}" placeholder="*Должность">
+					            <input type="text" value="" class="form-control vld-field vld-input"  data-required="true" pattern="\D{2,}" placeholder="*Должность">
 					            <label>Должность</label>
 					            <div class="validator">Обязательное поле</div>
 					        </div>
@@ -391,13 +439,13 @@
 					        <div class="form-input__inner">
 					            <input class="form-control vld-field vld-input"  data-required="true" pattern="\S+@\S+\.\S+" type="email" value="" placeholder="*Email">
 					            <label>Email</label>
-					            <div class="validator">Обязательное поле</div>
+					            <div class="validator">Укажите, пожалуйста, корректный email</div>
 					        </div>
 					    </div>
 					    
 					    <div class="form-check mt-1">
 					        <div class="form-check__inner ">
-					            <input type="checkbox" value="1" name=""  data-required="true" />
+					            <input  class="vld-field vld-input" type="checkbox" value="1" name=""  data-required="true" />
 					            <span class="form-check-box"></span>
 					            <div class="form-check-content">
 					                <span class="form-check-txt" style="font-size: 12px;">
@@ -409,20 +457,90 @@
 					    </div>
 			            <div style="color:#BDBDBD; font-size:12px; margin-top:15px">* обязательные для заполнения поля</div>
 					    
-					<button type="button" class="btn btn-square btn-square-black btnGetRegistration disabled mt-4">Зарегистрироваться</button>
+						<button type="button" class="btn btn-square btn-square-black btnGetRegistration disabled mt-4" data-bs-toggle="modal" data-bs-target="#thanksModal">Зарегистрироваться</button>
 					</form>					
-				</div>
-				<div class="modal-footer">
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- modal enter -->
+	<div class="modal fade" id="enterModal" tabindex="-1" aria-labelledby="enterModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-registration">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="enterModalLabel">Вход</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="form vld-form" data-validate-onload="false" data-btnlinked=".btnEnter">						
+					    <div class="form-input">
+					        <div class="form-input__inner">
+					            <input type="text" value="" class="form-control vld-field vld-input"  data-required="true" pattern="\D{2,}" placeholder="*Фамилия">
+					            <label>Фамилия</label>
+					            <div class="validator">Обязательное поле</div>
+					        </div>
+					    </div>
+					    <div class="form-input">
+					        <div class="form-input__inner">
+					            <input class="form-control vld-field vld-input"  data-required="true" pattern="\S+@\S+\.\S+" type="email" value="" placeholder="*Email">
+					            <label>Email</label>
+					            <div class="validator">Укажите, пожалуйста, корректный email</div>
+					        </div>
+					    </div>					    				    
+					    
+			            <div style="color:#BDBDBD; font-size:12px; margin-top:15px">* обязательные для заполнения поля</div>
+					    
+						<button type="button" class="btn btn-square btn-square-black btnEnter disabled mt-4">Войти</button>
+						<p class="mt-4 mb-0" style="font-size: 12px">Если вы не авторизованный пользователь, то для входа сначала нужно <span  data-bs-toggle="modal" data-bs-target="#registrationModal" class="uline">зарегистрироваться</span></p>
+					</form>					
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<!-- thanks modal -->
+	<div class="modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-registration">
+			<div class="modal-content text-center">
+				<div class="modal-header">
+					<h5 class="modal-title" id="thanksModalLabel">Спасибо, что зарегистрировались на наше мероприятие!</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Мы будем держать вас в курсе обновления деловой программы по указанной вами электронной почте.</p>
+					<p class="c-gold">Будем с нетерпением ждать вас на онлайн-конференции 31 мая в 11:00</p>
+					<p style="font-size: 12px; color: #BDBDBD; margin:50px 0 0">При заходе на сайт с другого устройства вы сможете авторизоваться по электронной почте</p>
+					<button type="button" class="btn btn-square btn-square-black btnEnter mt-3" data-bs-dismiss="modal" aria-label="Close">Понятно</button>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+		<!-- broadcastOnAir modal -->
+	<div class="modal fade" id="broadcastOnAirModal" tabindex="-1" aria-labelledby="broadcastOnAirModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-registration">
+			<div class="modal-content text-center">
+				<div class="modal-header">
+					<h5 class="modal-title" id="broadcastOnAirModalLabel">Трансляция уже началась! Для просмотра пройдите регистрацию</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					
+					<button type="button" class="btn btn-square btn-square-black btnEnter mt-3" data-bs-toggle="modal" data-bs-target="#registrationModal">Зарегистрироваться</button>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
 
 	<script type="text/javascript" src="js/common.js"></script>
 </body>
