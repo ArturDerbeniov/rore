@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "CSTM Xprmntl-01-Regular-Web";
+  src: url("../fonts/CSTM Xprmntl-01-Regular-Web.woff2") format("woff2"), url("../fonts/CSTM Xprmntl-01-Regular-Web.woff") format("woff"), url("../fonts/CSTM Xprmntl-01-Regular-Web.svg#CSTM Xprmntl-01-Regular-Web") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Circe-Regular";
   src: url("../fonts/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe-Regular.woff") format("woff"), url("../fonts/Circe-Regular.svg#Circe-Regular") format("svg");
   font-weight: 400;
