@@ -3,13 +3,16 @@ document.addEventListener("click", eventDocClick, false);
 window.addEventListener("load", eventWindowLoad, false);
 window.addEventListener("resize", function () { fnDelay(function () { eventWindowResize() }, 300) }, false);
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
 function eventDomLoaded() {
 
 }
 function eventWindowLoad() {
+	patchesHeader.init();
 	patchesFooter.init();
+	letters.init();
+	vld.init();
 }
 function eventWindowResize() {	
 	
@@ -27,6 +30,18 @@ function eventDocClick(e) {
     		else {
     			document.body.classList.remove("headerMainMenuActive");	
     		}
+    		break;
+    	}
+    	if(targ.classList.contains("goto")) {
+    		console.log(targ.getAttribute("data-dir"));
+    		gsap.to(window, {duration: 2,scrollTo:targ.getAttribute("data-dir"),ease: "power2"});
+    		e.preventDefault();
+    		if(window.innerWidth <= 991) {
+    			if(document.body.classList.contains("headerMainMenuActive")) {    				
+	    			document.querySelector(".headerMain__menu__bar").click();
+    			}
+    		}
+    		break;
     	}
 
         targ = targ.parentNode;
@@ -76,6 +91,80 @@ function getRndArr(collectionLen) {
     }
 }
 var ColorsPatches = ["rgba(146, 173, 170, 0.88)","#0E375F","#92ADAA","#8F6068","#D0D3D6","#FCEAF6"];
+var patchesHeader = {
+	patches: undefined,
+	sides: undefined,
+	init: function() {
+		if(document.querySelectorAll(".patchwork__header")) {			
+		    this.patches = document.querySelectorAll(".patchwork__header .patch");		    
+		    this.sides = ["left","right","top","bottom"];
+		    this.patches.forEach((patch) => {
+		    	let side = gsap.utils.random(this.sides);
+		    	let p = patch.querySelector(".patch__inner");
+		    	p.style[side] = "100%";
+		    	p.setAttribute("data-side", side);
+		    	gsap.set(p, {
+		    		backgroundColor: () => { return gsap.utils.random(ColorsPatches)},
+		    		onComplete: () => {patch.style.opacity = 1}
+		    	})
+		    });
+
+			this.show();
+		}
+	},
+	show: function() {
+		var placesRndArr = [],
+	    	patchesLen = 24;
+
+		if(window.innerWidth >= 768) {
+			patchesLen = 22;
+		}
+
+		placesRndArr = getRndArr(patchesLen);
+
+		ScrollTrigger.create({
+			trigger: document.querySelector(".patchwork__header"),
+			start: "top 100%",
+			end: "bottom top",
+			onToggle: self => {
+				if(self.isActive) {
+					showPatches();
+				}
+				else {
+					resetPathces()
+				}
+			}
+		});
+
+		function showPatches() {
+			var tl = gsap.timeline({});
+
+			for(let i = 0; i < placesRndArr.length; i++) {
+				let patch = document.querySelector(".patchwork__header .patch[data-place='"+(placesRndArr[i]+1)+"']");
+				let side = patch.querySelector(".patch__inner").getAttribute("data-side");
+				tl.to(patch.querySelector(".patch__inner"), {
+					[side]: "0",
+					duration:0.5,
+				}, "<0.1");				
+			}
+		}
+
+		function resetPathces() {
+			placesRndArr = getRndArr(patchesLen);
+			let patches = patchesHeader.patches;
+			patches.forEach((patch) => {
+				let side = gsap.utils.random(patchesHeader.sides);
+		    	let p = patch.querySelector(".patch__inner");
+		    	p.removeAttribute("style");
+		    	p.style[side] = "100%";
+		    	p.setAttribute("data-side", side);
+		    	gsap.set(p, {					
+		    		backgroundColor: () => { return gsap.utils.random(ColorsPatches)}	
+		    	})
+		    });
+		}
+	}
+};
 var patchesFooter = {
 	patches: undefined,
 	init: function() {
@@ -126,11 +215,33 @@ var patchesFooter = {
 		}
 
 		function resetPathces() {
+			placesRndArr = getRndArr(patchesLen);
 			let patches = patchesFooter.patches;
 			gsap.set(patches, {
 				opacity:0,
 				scale:.85,
 				backgroundColor: () => { return gsap.utils.random(ColorsPatches)}
+			});
+		}
+	}
+};
+var letters = {
+	init: function () {
+		letters = document.querySelectorAll(".letter");
+		if(letters.length) {
+			letters.forEach((letter) => {
+				gsap.to(letter, {
+					duration:0.5,
+					scale:1,
+					filter:"blur(0px)",
+					delay:.3,
+					scrollTrigger: {
+						trigger: letter,
+						start: "top 100%",
+						end: "bottom 0",
+						toggleActions: "play reset play reset"								
+					}
+				})
 			});
 		}
 	}
@@ -366,4 +477,4 @@ var vld = {
         }
     },
 };
-vld.init();
+
