@@ -231,11 +231,11 @@ a {
   color: #fff;
 }
 .btn-square-black:hover {
-  background-color: black;
-  transition: background-color 0.4s;
+  background-color: #333333;
+  transition: background-color 0.3s;
 }
 .btn-square-black:active {
-  background-color: black;
+  background-color: #333333;
 }
 @media (max-width: 575.98px) {
   .btn-wxs-100 {
@@ -251,6 +251,7 @@ a {
   background-color: #000;
   border-color: #bC9769;
   min-height: 40px;
+  transition: background-color 0.2s;
 }
 .btn-round-gold:hover, .btn-round-gold:active {
   background-color: #bC9769;
