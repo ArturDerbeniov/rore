@@ -1,21 +1,18 @@
-document.addEventListener('DOMContentLoaded', eventDomLoaded);
 document.addEventListener("click", eventDocClick, false);
 window.addEventListener("load", eventWindowLoad, false);
-window.addEventListener("resize", function () { fnDelay(function () { eventWindowResize() }, 300) }, false);
+window.addEventListener("scroll", function () { fnDelay(function () { eventWindowScroll() }, 300) }, false);
 
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
-function eventDomLoaded() {
-
-}
 function eventWindowLoad() {
 	patchesHeader.init();
 	patchesFooter.init();
 	letters.init();
 	vld.init();
+	scrollToTopLnkPosition();
 }
-function eventWindowResize() {	
-	
+function eventWindowScroll() {
+	scrollToTopLnkPosition();	
 }
 function eventDocClick(e) {
     var targ = e.target;
@@ -64,6 +61,17 @@ var loadJS = function(url, callback, locToInsert){
 
     locToInsert.appendChild(scriptTag);
 };
+function scrollToTopLnkPosition() {
+	var scrollToTopLnk;
+	if(scrollToTopLnk = document.getElementById("scrollToTop")) {		
+		if(window.scrollY > window.innerHeight) {
+			scrollToTopLnk.classList.add("active");
+		}
+		else {
+			scrollToTopLnk.classList.remove("active");	
+		}
+	}
+}
 function getRndArr(collectionLen) {
     var arr = [];
     for (var i = collectionLen - 1; i >= 0; i--) {
