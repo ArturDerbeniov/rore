@@ -98,7 +98,7 @@ function getRndArr(collectionLen) {
         return inArray;
     }
 }
-var ColorsPatches = ["rgba(146, 173, 170, 0.88)","#0E375F","#92ADAA","#8F6068","#D0D3D6","#FCEAF6"];
+var ColorsPatches = ["rgb(110, 164, 202)","rgb(114, 154, 133)","rgb(41, 114, 29)","rgb(221, 224, 223)","rgb(83, 28, 42)","#0E375F","#92ADAA","#8F6068","#D0D3D6","#FCEAF6"];
 var patchesHeader = {
 	patches: undefined,
 	sides: undefined,
